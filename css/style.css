@@ -1,0 +1,166 @@
+:root {
+	--primary-color: #292a2e;
+	--secondary-color: #202024;
+	--grey-text: #c9ccd6;
+	--error-color: #fc4747;
+	--purple: #663399;
+	--light-purple: #8f45d9;
+	
+}
+
+html{
+  --background: white;
+  --text: black;
+}
+body {
+	height: 100%;
+	flex-direction: column;
+	background-color: var(--primary-color);
+	line-height: 1.6;
+	color: #ffffff;
+	max-width: 100%;
+	overflow-x: hidden;
+	
+}
+
+
+* {
+	font-family: 'Lato', sans-serif;
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+}
+
+
+
+.navbar {
+	color: #ffffff;
+	height: 80px;
+	font-weight: 400;
+	background-color: var(--secondary-color);
+	border-bottom: var(--purple) 5px solid;
+}
+
+
+.navbar ul li {
+
+		display: inline-block;
+	
+}
+.navbar a {
+  
+    border: 1px solid  rgba(252, 0, 76, 0.685);
+	position: relative;
+	border-radius: 2vh;
+	display: inline-block;
+	padding: 10px 15px;
+	color: var(--purple);
+	font-size: -1em;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	transition: .5s;
+	margin-top: 2vh;
+	letter-spacing: 4px;
+	margin-left: 5vh;
+	
+}
+
+
+.navbar a:hover {
+	
+	background: var(--light-purple);
+	color: #ffffff;
+  box-shadow: 0 0 -2vh #8708a0,
+              0 0 -1vh #8708a0,
+              0 0 1vh #8708a0
+}
+
+.navbar .currentPage,
+.navbar .currentPage:hover {
+	color: var(--light-purple);
+}
+
+
+
+.button span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+.button span:after {
+	font-size: 25px;
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: -10px;
+	right: -20px;
+	transition: 0.5s;
+}
+
+.button:hover span {
+	padding-right: 25px;
+}
+
+.button:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+
+@media (max-width: 768px) {
+	.navbar {
+		height: auto;
+		font-size: 1.05rem;
+	}
+
+	.navbar ul {
+		margin: 0 0 15px 0;
+	}
+
+	.navbar .flex {
+		flex-direction: column;
+	}
+
+	.navbar texlex {
+		margin: 10px 0 5px 0;
+		flex-direction: row;
+	}
+
+	.navbar .logo p {
+		font-size: 1.5rem;
+	}
+
+	.navbar .logo img {
+		height: 50px;
+	}
+
+
+@media (max-width: 450px) {
+	.navbar {
+		justify-content: center;
+		width: 100%;
+		height: auto;
+		font-size: 1rem;
+	}
+
+	.navbar .logo:active ul {
+		display: block;
+	}
+
+	.navbar ul {
+		margin: 0 0 15px 0;
+	}
+
+	.navbar ul {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.navbar li {
+		margin: 5px 0;
+		font-size: 1rem;
+	}
+}
+}
